@@ -8,5 +8,6 @@ LABEL "com.github.actions.color"="blue"
 LABEL "repository"="http://github.com/dbfx/github-phplint"
 LABEL "homepage"="http://github.com/actions"
 LABEL "maintainer"="Dave B <dave@blakey.co>"
+
 ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/bin/sh -l /entrypoint.sh"]
