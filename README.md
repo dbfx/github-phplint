@@ -82,12 +82,14 @@ Right now there is support for the following PHP versions:
  
  If you would like to add more submit a PR or an issue. 
  
- ---
+---
 
 ## Ignoring paths
 
 You can see in the above examples it ignores certain paths. You may add as many as you need by copying the example. 
 The action ignores the folder `vendor` at root of project by default.
+
+---
 
 ## Original work
 
