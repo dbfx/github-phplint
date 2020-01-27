@@ -17,15 +17,15 @@ steps:
     with:
       fetch-depth: 0
   - name: PHP syntax checker 5.6
-    uses: dbfx/github-phplint/5.6@v1
+    uses: dbfx/github-phplint/5.6@master
     with:
       folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
   - name: PHP Lint 7.2
-    uses: dbfx/github-phplint/7.2@v1
+    uses: dbfx/github-phplint/7.2@master
     with:
       folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
   - name: PHP Lint 7.3
-    uses: dbfx/github-phplint/7.3@v1
+    uses: dbfx/github-phplint/7.3@master
     with:
       folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
 ```
@@ -52,15 +52,15 @@ jobs:
         with:
           fetch-depth: 0
       - name: PHP Lint 7.2
-        uses: dbfx/github-phplint/7.2@v1
+        uses: dbfx/github-phplint/7.2@master
         with:
           folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
       - name: PHP Lint 7.3
-        uses: dbfx/github-phplint/7.3@v1
+        uses: dbfx/github-phplint/7.3@master
         with:
           folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
       - name: PHP Lint 5.6
-        uses: dbfx/github-phplint/5.6@v1
+        uses: dbfx/github-phplint/5.6@master
         with:
           folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""   
 ```
