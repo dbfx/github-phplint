@@ -1,12 +1,14 @@
-# GitHub Action for PHP syntax check
+# PHP Lint GitHub Action
 
-This actions runs `php -l` on all PHP files found in the current project. It allows you to easily and quickly check for 
+This Github Action runs `php -l` on all PHP files found in the current project. It allows you to easily and quickly check for 
 any syntax / parse errors in your PHP files on pull requests or pushes. This is especially useful for code that is 
 meant to run on multiple PHP versions.  
 
+---
+
 ## Getting Started
 
-Using this action can be done with this template:
+Using this action can be done with the following template:
 
 ```
 steps:
@@ -27,6 +29,8 @@ steps:
     with:
       folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
 ```
+
+---
 
 ## Brand New Setup
 
@@ -66,6 +70,19 @@ If you want to run the lint on Pull Requests instead of pushes change the ```on:
 In the above example, your workflow will run the PHP syntax check with PHP 5.6, 7.2 & 7.3. You may remove any of these that do not apply.
 
 ---
+
+## Supported versions
+
+Right now there is support for the following PHP versions: 
+ - 5.5
+ - 5.6
+ - 7.2
+ - 7.3
+ - 7.4
+ 
+ If you would like to add more submit a PR or an issue. 
+ 
+ ---
 
 ## Ignoring paths
 
