@@ -79,6 +79,7 @@ Right now there is support for the following PHP versions:
  - 7.2
  - 7.3
  - 7.4
+ - 8.0
  
  If you would like to add more submit a PR or an issue. 
  
