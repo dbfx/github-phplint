@@ -8,24 +8,24 @@ meant to run on multiple PHP versions.
 
 ## Getting Started
 
-Using this action can be done with the following template:
+Using this action to check for syntax / parse errors for PHP versions 7.4, 8.0, and 8.3 can be done with the following template:
 
 ```
 steps:
   - name: Checkout
-    uses: actions/checkout@v1
+    uses: actions/checkout@v4
     with:
       fetch-depth: 0
-  - name: PHP syntax checker 5.6
-    uses: dbfx/github-phplint/5.6@master
+  - name: PHP Lint 7.4
+    uses: dbfx/github-phplint/7.4@master
     with:
       folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
-  - name: PHP Lint 7.2
-    uses: dbfx/github-phplint/7.2@master
+  - name: PHP Lint 8.0
+    uses: dbfx/github-phplint/8.0@master
     with:
       folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
-  - name: PHP Lint 7.3
-    uses: dbfx/github-phplint/7.3@master
+  - name: PHP Lint 8.3
+    uses: dbfx/github-phplint/8.3@master
     with:
       folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
 ```
@@ -48,7 +48,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: PHP Lint 7.2
@@ -59,10 +59,26 @@ jobs:
         uses: dbfx/github-phplint/7.3@master
         with:
           folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
-      - name: PHP Lint 5.6
-        uses: dbfx/github-phplint/5.6@master
+      - name: PHP Lint 7.4
+        uses: dbfx/github-phplint/7.4@master
+        with:
+          folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
+      - name: PHP Lint 8.0
+        uses: dbfx/github-phplint/8.0@master
         with:
           folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""   
+      - name: PHP Lint 8.1
+        uses: dbfx/github-phplint/8.1@master
+        with:
+          folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
+      - name: PHP Lint 8.2
+        uses: dbfx/github-phplint/8.2@master
+        with:
+          folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
+      - name: PHP Lint 8.3
+        uses: dbfx/github-phplint/8.3@master
+        with:
+          folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
 ```
 
 If you want to run the lint on Pull Requests instead of pushes change the ```on: push``` to ```on: pull```.
@@ -80,7 +96,9 @@ Right now there is support for the following PHP versions:
  - 7.3
  - 7.4
  - 8.0
- - 8.1 
+ - 8.1
+ - 8.2
+ - 8.3
  
  If you would like to add more submit a PR or an issue. 
  
