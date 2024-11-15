@@ -8,7 +8,7 @@ meant to run on multiple PHP versions.
 
 ## Getting Started
 
-Using this action to check for syntax / parse errors for PHP versions 7.4, 8.0, and 8.3 can be done with the following template:
+Using this action to check for syntax / parse errors for PHP versions 7.4, 8.0, and 8.4 can be done with the following template:
 
 ```
 steps:
@@ -24,8 +24,8 @@ steps:
     uses: dbfx/github-phplint/8.0@master
     with:
       folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
-  - name: PHP Lint 8.3
-    uses: dbfx/github-phplint/8.3@master
+  - name: PHP Lint 8.4
+    uses: dbfx/github-phplint/8.4@master
     with:
       folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
 ```
@@ -79,11 +79,15 @@ jobs:
         uses: dbfx/github-phplint/8.3@master
         with:
           folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
+      - name: PHP Lint 8.4
+        uses: dbfx/github-phplint/8.4@master
+        with:
+          folder-to-exclude: "! -path \"./vendor/*\" ! -path \"./folder/excluded/*\""
 ```
 
 If you want to run the lint on Pull Requests instead of pushes change the ```on: push``` to ```on: pull```.
 
-In the above example, your workflow will run the PHP syntax check with PHP 5.6, 7.2 & 7.3. You may remove any of these that do not apply.
+In the above example, your workflow will run the PHP syntax check with PHP 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, and 8.4. You may remove any of these that do not apply.
 
 ---
 
@@ -99,6 +103,7 @@ Right now there is support for the following PHP versions:
  - 8.1
  - 8.2
  - 8.3
+ - 8.4
  
  If you would like to add more submit a PR or an issue. 
  
