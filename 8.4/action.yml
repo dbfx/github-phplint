@@ -1,0 +1,12 @@
+name: 'PHP 8.4 Lint'
+description: 'PHP linter for PHP 8.4'
+inputs:
+  folder-to-exclude:
+    description: 'Folder to exclude'
+    required: false
+    default: '! -path "./vendor/*"'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.folder-to-exclude }}
